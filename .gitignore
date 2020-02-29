@@ -1,0 +1,13 @@
+# User-specific stuff
+.idea/
+*.iml
+
+# IntelliJ
+out/
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
