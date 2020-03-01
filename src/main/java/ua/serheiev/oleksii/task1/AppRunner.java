@@ -55,8 +55,9 @@ public class AppRunner {
             LOGGER.warn("Cannot add the file {} due to it does not exists", fileName);
     }
 
+
     private File getFile(String fileName) {
-        URL resource = AppRunner.class.getClassLoader().getResource(fileName);
+        URL resource = getClass().getClassLoader().getResource(fileName);
         return new File(resource.getFile());
     }
 
