@@ -1,5 +1,6 @@
 package ua.serheiev.oleksii.task1.category.holder;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 
@@ -18,5 +19,12 @@ public interface CategoryDataHolderProvider {
      *
      * @return category name and category data holder map or empty map.
      */
-    Map<String, CategoryDataHolder> getHolders();
+    Map<String, CategoryDataHolder> getCategoryHoldersMap();
+
+    /**
+     * Provides all available {@link CategoryDataHolder}'s.
+     *
+     * @return category data holders or empty collection.
+     */
+    Collection<CategoryDataHolder> getHolders();
 }

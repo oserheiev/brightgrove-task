@@ -69,7 +69,7 @@ public class CategoryServiceImplTest {
         dataItems.add("horse");
         dataItems.add("cow");
 
-        when(categoryDataHolderProvider.getHolders()).thenReturn(dataHolders);
+        when(categoryDataHolderProvider.getCategoryHoldersMap()).thenReturn(dataHolders);
         when(categoryDataFormatterProvider.getFormatter(Category.ANIMALS)).thenReturn(categoryDataFormatter);
         when(categoryDataHolder.getAll()).thenReturn(dataItems);
         when(categoryDataFormatter.format(Category.ANIMALS, dataItems)).thenReturn(FORMATTED_DATA_ITEMS);

@@ -1,5 +1,6 @@
 package ua.serheiev.oleksii.task1.category.holder;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
@@ -18,7 +19,12 @@ public class CategoryDataHolderProviderImpl implements CategoryDataHolderProvide
     }
 
     @Override
-    public Map<String, CategoryDataHolder> getHolders() {
+    public Map<String, CategoryDataHolder> getCategoryHoldersMap() {
         return Collections.unmodifiableMap(categoryDataHolders);
+    }
+
+    @Override
+    public Collection<CategoryDataHolder> getHolders() {
+        return Collections.unmodifiableCollection(categoryDataHolders.values());
     }
 }

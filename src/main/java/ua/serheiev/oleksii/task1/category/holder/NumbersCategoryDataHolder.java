@@ -18,4 +18,9 @@ public class NumbersCategoryDataHolder implements CategoryDataHolder<Map<String,
     public Map<String, Long> getAll() {
         return Collections.unmodifiableMap(dataItemFrequencyPairs);
     }
+
+    @Override
+    public void clear() {
+        dataItemFrequencyPairs.clear();
+    }
 }

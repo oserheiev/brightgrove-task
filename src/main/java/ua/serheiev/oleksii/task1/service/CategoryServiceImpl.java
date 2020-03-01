@@ -42,7 +42,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @SuppressWarnings("unchecked")
     public String format() {
-        Map<String, CategoryDataHolder> categoryDataHolders = categoryDataHolderProvider.getHolders();
+        Map<String, CategoryDataHolder> categoryDataHolders = categoryDataHolderProvider.getCategoryHoldersMap();
         StringBuilder stringBuilder = new StringBuilder();
 
         categoryDataHolders.forEach((categoryName, categoryDataHolder) -> {
@@ -52,6 +52,11 @@ public class CategoryServiceImpl implements CategoryService {
             stringBuilder.append(formattedCategoryData);
         });
         return stringBuilder.toString();
+    }
+
+    @Override
+    public void clear() {
+        categoryDataHolderProvider.getHolders().forEach(CategoryDataHolder::clear);
     }
 
     private void addCategoryDataItem(String dataItem) {

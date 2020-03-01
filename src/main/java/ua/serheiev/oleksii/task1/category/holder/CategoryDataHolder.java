@@ -15,4 +15,9 @@ public interface CategoryDataHolder<T> {
      * @return collected category data items.
      */
     T getAll();
+
+    /**
+     * Clear all saved data items.
+     */
+    void clear();
 }

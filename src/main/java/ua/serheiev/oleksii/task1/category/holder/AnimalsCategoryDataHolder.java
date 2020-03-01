@@ -17,4 +17,9 @@ public class AnimalsCategoryDataHolder implements CategoryDataHolder<Set<String>
     public Set<String> getAll() {
         return Collections.unmodifiableSet(dataItems);
     }
+
+    @Override
+    public void clear() {
+        dataItems.clear();
+    }
 }

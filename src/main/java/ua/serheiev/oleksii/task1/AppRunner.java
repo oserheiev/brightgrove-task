@@ -16,7 +16,7 @@ public class AppRunner {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AppRunner.class.getName());
 
-    private static final String[] INPUT_FILE_NAMES = {"input.txt"};
+    private static final String[] INPUT_FILE_NAMES = {"input.txt", "input2.txt"};
 
     private CategoryService categoryService;
 
@@ -48,6 +48,7 @@ public class AppRunner {
             if (file.exists()) {
                 processFileCategoryData(file);
                 displayCategoryData(displayWriter);
+                categoryService.clear();
                 return;
             }
             LOGGER.warn("Cannot add the file {} due to it does not exists", fileName);

@@ -23,4 +23,9 @@ public interface CategoryService {
      * @return processed category data representation or empty string.
      */
     String format();
+
+    /**
+     * Clears all {@link CategoryDataHolder}'s to be able to process another file.
+     */
+    void clear();
 }
