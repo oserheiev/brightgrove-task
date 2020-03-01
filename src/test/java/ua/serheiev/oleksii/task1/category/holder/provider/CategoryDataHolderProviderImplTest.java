@@ -1,7 +1,9 @@
-package ua.serheiev.oleksii.task1.category.holder;
+package ua.serheiev.oleksii.task1.category.holder.provider;
 
 import org.junit.Before;
 import org.junit.Test;
+import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolder;
+import ua.serheiev.oleksii.task1.category.holder.UniqueItemsCategoryDataHolder;
 import ua.serheiev.oleksii.task1.constant.Const.Category;
 
 import java.util.Collections;
@@ -19,7 +21,7 @@ public class CategoryDataHolderProviderImplTest {
     @Before
     public void setUp() throws Exception {
         Map<String, CategoryDataHolder> dataHolders = Collections.singletonMap(Category.ANIMALS,
-                new AnimalsCategoryDataHolder());
+                new UniqueItemsCategoryDataHolder());
         categoryDataHolderProvider = new CategoryDataHolderProviderImpl(dataHolders);
     }
 

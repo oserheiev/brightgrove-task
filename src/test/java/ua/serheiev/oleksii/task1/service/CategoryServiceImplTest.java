@@ -6,9 +6,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import ua.serheiev.oleksii.task1.category.formatter.CategoryDataFormatter;
-import ua.serheiev.oleksii.task1.category.formatter.CategoryDataFormatterProvider;
+import ua.serheiev.oleksii.task1.category.formatter.provider.CategoryDataFormatterProvider;
 import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolder;
-import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolderProvider;
+import ua.serheiev.oleksii.task1.category.holder.provider.CategoryDataHolderProvider;
 import ua.serheiev.oleksii.task1.constant.Const.Category;
 
 import java.util.*;

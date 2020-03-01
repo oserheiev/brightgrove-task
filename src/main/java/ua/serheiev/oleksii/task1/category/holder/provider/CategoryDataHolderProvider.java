@@ -1,4 +1,6 @@
-package ua.serheiev.oleksii.task1.category.holder;
+package ua.serheiev.oleksii.task1.category.holder.provider;
+
+import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolder;
 
 import java.util.Collection;
 import java.util.Map;

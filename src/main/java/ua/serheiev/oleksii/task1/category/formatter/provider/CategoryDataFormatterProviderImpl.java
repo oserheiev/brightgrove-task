@@ -1,4 +1,6 @@
-package ua.serheiev.oleksii.task1.category.formatter;
+package ua.serheiev.oleksii.task1.category.formatter.provider;
+
+import ua.serheiev.oleksii.task1.category.formatter.CategoryDataFormatter;
 
 import java.util.Map;
 
