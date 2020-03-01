@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class AnimalsCategoryDataHolder implements CategoryDataHolder<Set<String>> {
+public class UniqueItemsCategoryDataHolder implements CategoryDataHolder<Set<String>> {
 
     private Set<String> dataItems = new HashSet<>();
 

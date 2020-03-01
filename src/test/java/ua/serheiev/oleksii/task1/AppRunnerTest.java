@@ -27,7 +27,7 @@ public class AppRunnerTest {
     private AppRunner appRunner;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         when(appRunner.prepareBufferedConsoleWriter()).thenReturn(bufferedWriter);
     }
 

@@ -3,9 +3,9 @@ package ua.serheiev.oleksii.task1.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.serheiev.oleksii.task1.category.formatter.CategoryDataFormatter;
-import ua.serheiev.oleksii.task1.category.formatter.CategoryDataFormatterProvider;
+import ua.serheiev.oleksii.task1.category.formatter.provider.CategoryDataFormatterProvider;
 import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolder;
-import ua.serheiev.oleksii.task1.category.holder.CategoryDataHolderProvider;
+import ua.serheiev.oleksii.task1.category.holder.provider.CategoryDataHolderProvider;
 
 import java.util.Map;
 import java.util.Optional;
