@@ -35,14 +35,15 @@ public class AppRunner {
 
     public void run(String[] inputFileNames) {
         try (BufferedWriter displayWriter = prepareBufferedConsoleWriter()) {
-            processFiles(displayWriter, inputFileNames);
+            for (String fileName : inputFileNames) {
+                processFiles(displayWriter, fileName, inputFileNames);
+            }
         } catch (IOException e) {
             LOGGER.error("Cannot print category data items", e);
         }
     }
 
-    private void processFiles(BufferedWriter displayWriter, String[] inputFileNames) throws IOException {
-        for (String fileName : inputFileNames) {
+    private void processFiles(BufferedWriter displayWriter, String fileName, String[] inputFileNames) throws IOException {
             File file = getFile(fileName);
 
             if (file.exists()) {
@@ -52,7 +53,6 @@ public class AppRunner {
                 return;
             }
             LOGGER.warn("Cannot add the file {} due to it does not exists", fileName);
-        }
     }
 
     private File getFile(String fileName) {
@@ -63,7 +63,7 @@ public class AppRunner {
     private void displayCategoryData(BufferedWriter displayWriter) throws IOException {
         String categoryData = categoryService.format();
         displayWriter.write(categoryData);
-
+        displayWriter.write(System.lineSeparator());
     }
 
     private void processFileCategoryData(File file) {
